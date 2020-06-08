@@ -1,0 +1,4 @@
+ {% extends 'blog/base.html' %} {% block c %}
+<h2><a href="{%  url 'post_new'  %}">create new post</a></h2><br>{% for i in text %}
+
+<h1><a href="{%  url 'post_detail'  pk=i.pk %}">{{ i.title }}</a></h1><br> {{ i.text|linebreaks }} <br> Published: {{ i.published_date }} <br> {% endfor %} {% endblock %}
